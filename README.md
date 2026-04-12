@@ -2,6 +2,8 @@
 
 Track and visualize Spotify streaming data for your favorite artists.
 
+**Live site**: https://mcmonkeyman.github.io/artist-stats/
+
 Pulls stream counts from [Kworb](https://kworb.net) and album/track structure from Wikipedia, then renders interactive Chart.js dashboards — all songs charted chronologically by release, color-coded by album.
 
 ## Quick start
@@ -52,6 +54,10 @@ This updates the numbers without re-scraping Wikipedia. Each run writes a new da
 ```bash
 make build          # generates index + per-artist pages into build/
 ```
+
+## Deployment
+
+The site is automatically deployed to [GitHub Pages](https://mcmonkeyman.github.io/artist-stats/) on every push to `main` via the [`.github/workflows/deploy.yml`](https://github.com/mcmonkeyman/artist-stats/blob/main/.github/workflows/deploy.yml) action. The workflow runs `make build` and publishes the `build/` directory.
 
 ## Commands
 
