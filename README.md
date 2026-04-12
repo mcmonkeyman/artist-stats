@@ -1,4 +1,4 @@
-# Arpression
+# artist-stats
 
 Track and visualize Spotify streaming data for your favorite artists.
 

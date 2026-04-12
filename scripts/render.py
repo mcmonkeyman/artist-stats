@@ -269,7 +269,7 @@ def build_artist_body(artist: dict) -> str:
 
 def build_index_body(artists: list[dict]) -> str:
     parts = []
-    parts.append("<h1>Arpression</h1>")
+    parts.append("<h1>artist-stats</h1>")
     parts.append("<p>Spotify streaming data, visualized.</p>")
     parts.append("<hr>")
     parts.append('<div class="artist-grid">')
@@ -367,7 +367,7 @@ Chart.defaults.borderColor = '#333';
 
 def build_index_page(artists: list[dict]) -> bytes:
     body = build_index_body(artists)
-    return wrap_page("Arpression", body, extra_css=INDEX_CSS).encode()
+    return wrap_page("artist-stats", body, extra_css=INDEX_CSS).encode()
 
 
 def build_artist_page(artist: dict) -> bytes:
