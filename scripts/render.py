@@ -225,7 +225,7 @@ def build_artist_body(artist: dict) -> str:
     name = html.escape(meta["name"])
     parts = []
 
-    parts.append(f'<p style="margin-bottom:1rem"><a href="/">&larr; All Artists</a></p>')
+    parts.append(f'<p style="margin-bottom:1rem"><a href="../../">&larr; All Artists</a></p>')
     parts.append(f"<h1>{name} &mdash; Spotify Streams</h1>")
     parts.append(f'<p>Snapshot: {html.escape(snap["date"])}</p>')
     if meta.get("source_url"):
@@ -286,7 +286,7 @@ def build_index_body(artists: list[dict]) -> str:
         n_albums = len(snap["albums"])
         n_tracks = sum(len(album["tracks"]) for album in snap["albums"])
         parts.append(
-            f'<a href="/artist/{slug}" class="artist-card">'
+            f'<a href="artist/{slug}" class="artist-card">'
             f'<h2>{html.escape(meta["name"])}</h2>'
             f'<p>{n_albums} albums &middot; {n_tracks} tracks</p>'
             f'<p class="total">{total:,} total streams</p>'
