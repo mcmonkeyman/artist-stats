@@ -12,7 +12,8 @@
       "Bash(curl -s 'https://kworb.net/spotify/artist/4Z8W4fKeB5YxbusRsdQVPb_songs.html')",
       "Bash(curl -sI 'https://en.wikipedia.org/w/api.php?action=parse&page=Radiohead_discography&format=json&prop=text')",
       "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=The_Dark_Side_of_the_Moon&format=json&prop=text')",
-      "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=Abbey_Road&format=json&prop=text')"
+      "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=Abbey_Road&format=json&prop=text')",
+      "Bash(git:*)"
     ]
   }
 }

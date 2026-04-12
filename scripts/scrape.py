@@ -35,6 +35,8 @@ import urllib.parse
 from datetime import date
 from pathlib import Path
 
+from bs4 import BeautifulSoup, Tag
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 
@@ -143,7 +145,6 @@ def fetch_studio_albums(artist_name: str, wiki_page: str | None = None) -> list[
 
     Returns [{name, year, wiki_slug}] in chronological order.
     """
-    # Find the discography page
     if wiki_page:
         page_title = wiki_page
     else:
@@ -152,77 +153,81 @@ def fetch_studio_albums(artist_name: str, wiki_page: str | None = None) -> list[
             sys.exit(f"Could not find Wikipedia discography page for '{artist_name}'")
 
     print(f"  Wikipedia discography: {page_title}")
-    html = _wiki_parse(page_title)
+    raw = _wiki_parse(page_title)
+    soup = BeautifulSoup(raw, "lxml")
 
-    # Find the Studio albums section. We look for the heading, then parse
-    # the first wikitable after it.
-    studio_idx = html.find('id="Studio_albums"')
-    if studio_idx == -1:
-        # Some pages use "Studio_album" (singular) or different casing
-        studio_idx = html.lower().find('id="studio_albums"')
-    if studio_idx == -1:
+    # Find the "Studio albums" heading (h2 or h3)
+    heading = soup.find(id="Studio_albums")
+    if not heading:
+        heading = soup.find(id="Studio_album")
+    if not heading:
         sys.exit(
             f"Could not find 'Studio albums' section in '{page_title}'. "
             f"Try --wiki with the exact page name."
         )
 
-    # Extract the table after the heading
-    table_start = html.find("<table", studio_idx)
-    if table_start == -1:
+    # Walk forward from the heading to find the first wikitable
+    table = None
+    for sibling in heading.parent.find_all_next():
+        if isinstance(sibling, Tag) and sibling.name == "table" and "wikitable" in sibling.get("class", []):
+            table = sibling
+            break
+        # Stop if we hit the next section heading
+        if isinstance(sibling, Tag) and sibling.get("id") and sibling.name in ("h2", "h3", "span"):
+            if sibling.get("id") != "Studio_albums":
+                break
+
+    if not table:
         sys.exit("Could not find studio albums table")
 
-    # Find the end of this table (handle nested tables)
-    depth = 0
-    i = table_start
-    table_end = len(html)
-    while i < len(html):
-        if html[i:i+6] == "<table":
-            depth += 1
-        elif html[i:i+8] == "</table>":
-            depth -= 1
-            if depth == 0:
-                table_end = i + 8
-                break
-        i += 1
-
-    table_html = html[table_start:table_end]
-
-    # Parse album rows. Pattern: <th scope="row"><i><a href="/wiki/SLUG">Name</a></i></th>
-    # followed by a cell with "Released: DATE"
     albums = []
-    row_pattern = re.compile(
-        r'<th\s+scope="row"[^>]*>\s*<i>\s*<a\s+href="/wiki/([^"]+)"[^>]*>([^<]+)</a>\s*</i>\s*</th>'
-        r'.*?Released:\s*(\d{1,2}\s+\w+\s+)?(\d{4})',
-        re.DOTALL,
-    )
-    for m in row_pattern.finditer(table_html):
-        wiki_slug = m.group(1)
-        name = m.group(2).strip()
-        year = int(m.group(4))
-        albums.append({"name": name, "year": year, "wiki_slug": wiki_slug})
+    for row in table.find_all("tr"):
+        th = row.find("th", scope="row")
+        if not th:
+            continue
 
-    # Sort by year (should already be, but just in case)
+        # Album name: usually <th><i><a href="/wiki/Slug">Name</a></i></th>
+        # but sometimes <th><i>Name</i></th> without a link
+        link = th.find("a")
+        italic = th.find("i")
+
+        if link and link.get("href", "").startswith("/wiki/"):
+            name = link.get_text(strip=True)
+            wiki_slug = link["href"].split("/wiki/", 1)[1]
+        elif italic:
+            name = italic.get_text(strip=True)
+            wiki_slug = None
+        else:
+            continue
+
+        # Find year from "Released: ..." in the row
+        row_text = row.get_text()
+        year_m = re.search(r"Released:.*?(\d{4})", row_text)
+        if not year_m:
+            # Try to find any 4-digit year in parentheses or after the name
+            year_m = re.search(r"\b(19\d{2}|20\d{2})\b", row_text)
+        if not year_m:
+            continue
+
+        albums.append({
+            "name": name,
+            "year": int(year_m.group(1)),
+            "wiki_slug": wiki_slug,
+        })
+
     albums.sort(key=lambda a: a["year"])
     return albums
 
 
-def _strip_html(s: str) -> str:
-    """Remove all HTML tags from a string."""
-    return re.sub(r"<[^>]+>", "", s)
-
-
-def _extract_title_from_cell(cell_html: str) -> str:
-    """
-    Extract a track title from a table cell or list item.
-    Handles: "Title", "<a>Title</a>", quoted with inner links, etc.
-    """
-    text = _strip_html(cell_html)
-    # Try to extract quoted title
-    m = re.search(r'"([^"]+)"', text)
+def _extract_track_title(element) -> str:
+    """Extract a clean track title from a BeautifulSoup element's text."""
+    text = element.get_text()
+    # Try to extract quoted title (using various quote styles)
+    m = re.search(r'["\u201c]([^"\u201d]+)["\u201d]', text)
     if m:
         return m.group(1).strip()
-    # Fall back to text before duration-like patterns
-    text = re.split(r"\s*[\u2013\u2014]\s*\d", text)[0]  # split on – or — followed by digit
+    # Fall back to text before duration pattern (– 4:23)
+    text = re.split(r"\s*[\u2013\u2014\-]\s*\d+:\d+", text)[0]
     return text.strip(' "')
 
 
@@ -232,60 +237,52 @@ def fetch_tracklist(wiki_slug: str, album_name: str) -> list[str]:
     Returns a list of track names in order.
     Handles both formats: <table class="tracklist"> and simple <ol>.
     """
+    if not wiki_slug:
+        print(f"    Warning: no Wikipedia page for '{album_name}', skipping tracklist")
+        return []
+
     page_title = urllib.parse.unquote(wiki_slug).replace("_", " ")
-    html = _wiki_parse(page_title)
+    raw = _wiki_parse(page_title)
+    soup = BeautifulSoup(raw, "lxml")
 
     tracks = []
 
-    # Try Format B first: <table class="tracklist">
-    tracklist_tables = list(re.finditer(r'<table\s+class="tracklist"', html))
+    # Format B: <table class="tracklist"> (most common on well-maintained pages)
+    tracklist_tables = soup.find_all("table", class_="tracklist")
     if tracklist_tables:
-        for table_match in tracklist_tables:
-            start = table_match.start()
-            # Find end of this table
-            depth = 0
-            i = start
-            end = len(html)
-            while i < len(html):
-                if html[i:i+6] == "<table":
-                    depth += 1
-                elif html[i:i+8] == "</table>":
-                    depth -= 1
-                    if depth == 0:
-                        end = i + 8
-                        break
-                i += 1
-            table_html = html[start:end]
+        for table in tracklist_tables:
+            for row in table.find_all("tr"):
+                # Track rows have <th scope="row"> with the track number
+                th = row.find("th", scope="row")
+                if not th:
+                    continue
+                # Skip total-length rows
+                if "tracklist-total-length" in row.get("class", []):
+                    continue
+                th_text = th.get_text(strip=True)
+                if not re.match(r"\d+\.", th_text):
+                    continue
 
-            # Find each track row: <th scope="row">N.</th> followed by <td>...title...</td>
-            # We grab everything between the track-number <th> and the next </td>
-            row_pattern = re.compile(
-                r'<th[^>]*scope="row"[^>]*>\s*\d+\.\s*</th>\s*<td>(.*?)</td>',
-                re.DOTALL,
-            )
-            for rm in row_pattern.finditer(table_html):
-                title = _extract_title_from_cell(rm.group(1))
-                if title:
-                    tracks.append(title)
+                # The title is in the next <td> after the track-number <th>
+                td = th.find_next_sibling("td")
+                if td:
+                    title = _extract_track_title(td)
+                    if title:
+                        tracks.append(title)
 
         if tracks:
             return tracks
 
-    # Try Format A: find Track listing section, then <ol>
-    tl_idx = html.find('id="Track_listing"')
-    if tl_idx == -1:
-        tl_idx = html.lower().find('id="track_listing"')
-
-    if tl_idx != -1:
-        ol_start = html.find("<ol>", tl_idx)
-        if ol_start != -1:
-            ol_end = html.find("</ol>", ol_start)
-            if ol_end != -1:
-                ol_html = html[ol_start:ol_end]
-                for li_m in re.finditer(r"<li>(.*?)</li>", ol_html, re.DOTALL):
-                    title = _extract_title_from_cell(li_m.group(1))
-                    if title:
-                        tracks.append(title)
+    # Format A: <ol> list after "Track listing" heading
+    heading = soup.find(id="Track_listing") or soup.find(id="Track_Listing")
+    if heading:
+        # Find the first <ol> after the heading
+        ol = heading.parent.find_next("ol")
+        if ol:
+            for li in ol.find_all("li", recursive=False):
+                title = _extract_track_title(li)
+                if title:
+                    tracks.append(title)
 
     if not tracks:
         print(f"    Warning: could not parse tracklist for '{album_name}' ({page_title})")
