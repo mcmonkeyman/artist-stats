@@ -40,7 +40,7 @@ from bs4 import BeautifulSoup, Tag
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 
-USER_AGENT = "arpression/1.0 (streaming-data tracker; github.com; polite single-page scrape)"
+USER_AGENT = "artist-stats/1.0 (streaming-data tracker; github.com; polite single-page scrape)"
 REQUEST_DELAY = 2  # seconds between HTTP requests
 
 

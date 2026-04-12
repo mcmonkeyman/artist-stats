@@ -83,8 +83,6 @@ data/
 scripts/
   scrape.py                     # fetch from Kworb + Wikipedia, write snapshots
   render.py                     # serve or build the dashboard from snapshots
-  snapshot.py                   # ingest from markdown (bootstrap tool)
-  parse_md.py                   # shared markdown parser
 ```
 
 ## Data sources
