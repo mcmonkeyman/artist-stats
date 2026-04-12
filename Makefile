@@ -4,29 +4,39 @@ PORT      ?= 8787
 VENV      ?= .venv
 PY        = $(VENV)/bin/python3
 
-.PHONY: serve build add refresh scrape clean venv
+.PHONY: help venv serve build scrape add refresh clean
 
-venv: $(VENV)/.installed ## Create virtualenv and install dependencies
+help: ## Show this help
+	@grep -E '^[a-z][a-z_-]+:.*## ' $(MAKEFILE_LIST) | \
+		awk -F ':.*## ' '{printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
+
+venv: $(VENV)/.installed ## Create virtualenv and install deps
 
 $(VENV)/.installed: requirements.txt
 	python3 -m venv $(VENV)
 	$(PY) -m pip install -q -r requirements.txt
 	@touch $@
 
-serve: venv ## Serve the dashboard locally
+# ── Viewing ──────────────────────────────────────────────────
+
+serve: venv ## Start local dashboard (http://localhost:8787)
 	@$(PY) scripts/render.py --data-dir $(DATA_DIR) --port $(PORT)
 
 build: venv ## Generate static HTML into build/
 	@$(PY) scripts/render.py --data-dir $(DATA_DIR) --build --out $(BUILD_DIR)
 
-add: venv ## Add a new artist: make add ID=<spotify_id> [WIKI="Page title"]
+# ── Data ─────────────────────────────────────────────────────
+
+scrape: venv ## Add new artists from artists.json + refresh all
+	@$(PY) scripts/scrape.py sync
+
+add: venv ## Add one artist: make add ID=<spotify_id>
 	@$(PY) scripts/scrape.py add $(ID) $(if $(WIKI),--wiki "$(WIKI)",)
 
-refresh: venv ## Refresh stream counts for all artists
+refresh: venv ## Refresh stream counts for all existing artists
 	@$(PY) scripts/scrape.py refresh --all
 
-scrape: venv ## Sync from artists.json: add new + refresh all
-	@$(PY) scripts/scrape.py sync
+# ── Housekeeping ─────────────────────────────────────────────
 
 clean: ## Remove build output and venv
 	rm -rf $(BUILD_DIR) $(VENV)
