@@ -65,6 +65,32 @@ def _normalize(s: str) -> str:
     return re.sub(r"[^a-z0-9 ]", "", s.lower()).strip()
 
 
+def _build_stream_lookup(kworb_songs: list[dict]) -> dict[str, int]:
+    """
+    Build a normalized-name -> streams lookup from Kworb data.
+
+    Handles suffix patterns like "Song - 2007 Remaster", "Song - Live", etc.
+    by also indexing the base name (before " - "). When multiple versions
+    exist, the one with the most streams wins.
+    """
+    lookup: dict[str, int] = {}
+
+    def _add(key: str, streams: int):
+        if key not in lookup or streams > lookup[key]:
+            lookup[key] = streams
+
+    for s in kworb_songs:
+        full = _normalize(s["song"])
+        _add(full, s["streams"])
+
+        # Also index the base name before " - " suffixes
+        if " - " in s["song"]:
+            base = s["song"].split(" - ", 1)[0].strip()
+            _add(_normalize(base), s["streams"])
+
+    return lookup
+
+
 def _slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
@@ -304,11 +330,7 @@ def add_artist(spotify_id: str, wiki_page: str | None, dry_run: bool, data_dir: 
     source_url = f"https://kworb.net/spotify/artist/{spotify_id}_songs.html"
 
     # Build stream lookup from Kworb
-    stream_lookup: dict[str, int] = {}
-    for s in kworb_songs:
-        key = _normalize(s["song"])
-        if key not in stream_lookup:
-            stream_lookup[key] = s["streams"]
+    stream_lookup = _build_stream_lookup(kworb_songs)
 
     # Fetch discography from Wikipedia
     _polite_pause()
@@ -421,11 +443,7 @@ def refresh_artist(slug: str, dry_run: bool = False, data_dir: Path = DATA_DIR) 
     print(f"{len(scraped)} songs (kworb updated {last_updated})")
 
     # Build lookup
-    scraped_lookup: dict[str, int] = {}
-    for s in scraped:
-        key = _normalize(s["song"])
-        if key not in scraped_lookup:
-            scraped_lookup[key] = s["streams"]
+    scraped_lookup = _build_stream_lookup(scraped)
 
     # Update counts
     matched = 0
