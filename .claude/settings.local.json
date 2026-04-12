@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "WebFetch(domain:kworb.net)",
+      "Bash(curl -s -D /tmp/kworb_headers.txt 'https://kworb.net/spotify/artist/4Z8W4fKeB5YxbusRsdQVPb_songs.html' -o /tmp/kworb_songs.html)",
+      "Read(//tmp/**)",
+      "Bash(curl -s 'https://kworb.net/spotify/artist/4Z8W4fKeB5YxbusRsdQVPb.html' -o /tmp/kworb_peaks.html)",
+      "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=Radiohead_discography&format=json&prop=text')",
+      "Bash(echo EXIT:$?)",
+      "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=Pink_Floyd_discography&format=json&prop=text')",
+      "Bash(curl -s 'https://kworb.net/spotify/artist/4Z8W4fKeB5YxbusRsdQVPb_songs.html')",
+      "Bash(curl -sI 'https://en.wikipedia.org/w/api.php?action=parse&page=Radiohead_discography&format=json&prop=text')",
+      "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=The_Dark_Side_of_the_Moon&format=json&prop=text')",
+      "Bash(curl -s 'https://en.wikipedia.org/w/api.php?action=parse&page=Abbey_Road&format=json&prop=text')"
+    ]
+  }
+}
