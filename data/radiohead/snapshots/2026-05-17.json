@@ -1,0 +1,559 @@
+{
+  "date": "2026-05-17",
+  "albums": [
+    {
+      "name": "Pablo Honey",
+      "year": 1993,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "You",
+          "streams": 63169056
+        },
+        {
+          "num": 2,
+          "song": "Creep",
+          "streams": 2892364042
+        },
+        {
+          "num": 3,
+          "song": "How Do You?",
+          "streams": 17755721
+        },
+        {
+          "num": 4,
+          "song": "Stop Whispering",
+          "streams": 16955074
+        },
+        {
+          "num": 5,
+          "song": "Thinking About You",
+          "streams": 44270768
+        },
+        {
+          "num": 6,
+          "song": "Anyone Can Play Guitar",
+          "streams": 28675164
+        },
+        {
+          "num": 7,
+          "song": "Ripcord",
+          "streams": 12798561
+        },
+        {
+          "num": 8,
+          "song": "Vegetable",
+          "streams": 13372319
+        },
+        {
+          "num": 9,
+          "song": "Prove Yourself",
+          "streams": 12329668
+        },
+        {
+          "num": 10,
+          "song": "I Can't",
+          "streams": 12278006
+        },
+        {
+          "num": 11,
+          "song": "Lurgee",
+          "streams": 11438190
+        },
+        {
+          "num": 12,
+          "song": "Blow Out",
+          "streams": 48117171
+        }
+      ]
+    },
+    {
+      "name": "The Bends",
+      "year": 1995,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Planet Telex",
+          "streams": 58278246
+        },
+        {
+          "num": 2,
+          "song": "The Bends",
+          "streams": 75482045
+        },
+        {
+          "num": 3,
+          "song": "High and Dry",
+          "streams": 653048827
+        },
+        {
+          "num": 4,
+          "song": "Fake Plastic Trees",
+          "streams": 561084904
+        },
+        {
+          "num": 5,
+          "song": "Bones",
+          "streams": 43159227
+        },
+        {
+          "num": 6,
+          "song": "(Nice Dream)",
+          "streams": 84383848
+        },
+        {
+          "num": 7,
+          "song": "Just",
+          "streams": 298826565
+        },
+        {
+          "num": 8,
+          "song": "My Iron Lung",
+          "streams": 111937954
+        },
+        {
+          "num": 9,
+          "song": "Bullet Proof ... I Wish I Was",
+          "streams": 77266366
+        },
+        {
+          "num": 10,
+          "song": "Black Star",
+          "streams": 149294592
+        },
+        {
+          "num": 11,
+          "song": "Sulk",
+          "streams": 34674717
+        },
+        {
+          "num": 12,
+          "song": "Street Spirit (Fade Out)",
+          "streams": 194609184
+        }
+      ]
+    },
+    {
+      "name": "OK Computer",
+      "year": 1997,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Airbag",
+          "streams": 100996644
+        },
+        {
+          "num": 2,
+          "song": "Paranoid Android",
+          "streams": 308779548
+        },
+        {
+          "num": 3,
+          "song": "Subterranean Homesick Alien",
+          "streams": 112759873
+        },
+        {
+          "num": 4,
+          "song": "Exit Music (For A Film)",
+          "streams": 468189589
+        },
+        {
+          "num": 5,
+          "song": "Let Down",
+          "streams": 790833121
+        },
+        {
+          "num": 6,
+          "song": "Karma Police",
+          "streams": 854919262
+        },
+        {
+          "num": 7,
+          "song": "Fitter Happier",
+          "streams": 39694351
+        },
+        {
+          "num": 8,
+          "song": "Electioneering",
+          "streams": 57597784
+        },
+        {
+          "num": 9,
+          "song": "Climbing Up the Walls",
+          "streams": 77784833
+        },
+        {
+          "num": 10,
+          "song": "No Surprises",
+          "streams": 1348170070
+        },
+        {
+          "num": 11,
+          "song": "Lucky",
+          "streams": 97252188
+        },
+        {
+          "num": 12,
+          "song": "The Tourist",
+          "streams": 61800223
+        }
+      ]
+    },
+    {
+      "name": "Kid A",
+      "year": 2000,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Everything In Its Right Place",
+          "streams": 290321988
+        },
+        {
+          "num": 2,
+          "song": "Kid A",
+          "streams": 49176452
+        },
+        {
+          "num": 3,
+          "song": "The National Anthem",
+          "streams": 67144789
+        },
+        {
+          "num": 4,
+          "song": "How to Disappear Completely",
+          "streams": 204648144
+        },
+        {
+          "num": 5,
+          "song": "Treefingers",
+          "streams": 43422086
+        },
+        {
+          "num": 6,
+          "song": "Optimistic",
+          "streams": 54199552
+        },
+        {
+          "num": 7,
+          "song": "In Limbo",
+          "streams": 30907206
+        },
+        {
+          "num": 8,
+          "song": "Idioteque",
+          "streams": 96820503
+        },
+        {
+          "num": 9,
+          "song": "Morning Bell",
+          "streams": 29069100
+        },
+        {
+          "num": 10,
+          "song": "Motion Picture Soundtrack",
+          "streams": 136457661
+        }
+      ]
+    },
+    {
+      "name": "Amnesiac",
+      "year": 2001,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Packt Like Sardines In a Crushd Tin Box",
+          "streams": 23926627
+        },
+        {
+          "num": 2,
+          "song": "Pyramid Song",
+          "streams": 109072183
+        },
+        {
+          "num": 3,
+          "song": "Pulk/Pull Revolving Doors",
+          "streams": 15262902
+        },
+        {
+          "num": 4,
+          "song": "You And Whose Army?",
+          "streams": 72004879
+        },
+        {
+          "num": 5,
+          "song": "I Might Be Wrong",
+          "streams": 57986842
+        },
+        {
+          "num": 6,
+          "song": "Knives Out",
+          "streams": 82537679
+        },
+        {
+          "num": 7,
+          "song": "Morning Bell/Amnesiac",
+          "streams": 14514482
+        },
+        {
+          "num": 8,
+          "song": "Dollars and Cents",
+          "streams": 14994402
+        },
+        {
+          "num": 9,
+          "song": "Hunting Bears",
+          "streams": 17104175
+        },
+        {
+          "num": 10,
+          "song": "Like Spinning Plates",
+          "streams": 15511291
+        },
+        {
+          "num": 11,
+          "song": "Life In a Glasshouse",
+          "streams": 26603854
+        }
+      ]
+    },
+    {
+      "name": "Hail to the Thief",
+      "year": 2003,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "2 + 2 = 5",
+          "streams": 80121388
+        },
+        {
+          "num": 2,
+          "song": "Sit Down. Stand Up",
+          "streams": 19953479
+        },
+        {
+          "num": 3,
+          "song": "Sail To The Moon",
+          "streams": 41424708
+        },
+        {
+          "num": 4,
+          "song": "Backdrifts",
+          "streams": 17664533
+        },
+        {
+          "num": 5,
+          "song": "Go To Sleep",
+          "streams": 25548162
+        },
+        {
+          "num": 6,
+          "song": "Where I End and You Begin",
+          "streams": 35701033
+        },
+        {
+          "num": 7,
+          "song": "We Suck Young Blood",
+          "streams": 13359552
+        },
+        {
+          "num": 8,
+          "song": "The Gloaming",
+          "streams": 12443374
+        },
+        {
+          "num": 9,
+          "song": "There, There",
+          "streams": 85938891
+        },
+        {
+          "num": 10,
+          "song": "I Will",
+          "streams": 20352880
+        },
+        {
+          "num": 11,
+          "song": "A Punch Up at a Wedding",
+          "streams": 21011174
+        },
+        {
+          "num": 12,
+          "song": "Myxomatosis",
+          "streams": 23855311
+        },
+        {
+          "num": 13,
+          "song": "Scatterbrain",
+          "streams": 15885973
+        },
+        {
+          "num": 14,
+          "song": "A Wolf At the Door",
+          "streams": 46905138
+        }
+      ]
+    },
+    {
+      "name": "In Rainbows",
+      "year": 2007,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "15 Step",
+          "streams": 127759195
+        },
+        {
+          "num": 2,
+          "song": "Bodysnatchers",
+          "streams": 102801251
+        },
+        {
+          "num": 3,
+          "song": "Nude",
+          "streams": 249681399
+        },
+        {
+          "num": 4,
+          "song": "Weird Fishes / Arpeggi",
+          "streams": 379518054
+        },
+        {
+          "num": 5,
+          "song": "All I Need",
+          "streams": 450071325
+        },
+        {
+          "num": 6,
+          "song": "Faust Arp",
+          "streams": 61185948
+        },
+        {
+          "num": 7,
+          "song": "Reckoner",
+          "streams": 144242341
+        },
+        {
+          "num": 8,
+          "song": "House Of Cards",
+          "streams": 146430148
+        },
+        {
+          "num": 9,
+          "song": "Jigsaw Falling Into Place",
+          "streams": 421124990
+        },
+        {
+          "num": 10,
+          "song": "Videotape",
+          "streams": 70677029
+        }
+      ]
+    },
+    {
+      "name": "The King of Limbs",
+      "year": 2011,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Bloom",
+          "streams": 24419973
+        },
+        {
+          "num": 2,
+          "song": "Morning Mr Magpie",
+          "streams": 16342404
+        },
+        {
+          "num": 3,
+          "song": "Little By Little",
+          "streams": 15369819
+        },
+        {
+          "num": 4,
+          "song": "Feral",
+          "streams": 11749197
+        },
+        {
+          "num": 5,
+          "song": "Lotus Flower",
+          "streams": 82661408
+        },
+        {
+          "num": 6,
+          "song": "Codex",
+          "streams": 47727586
+        },
+        {
+          "num": 7,
+          "song": "Give Up The Ghost",
+          "streams": 19577579
+        },
+        {
+          "num": 8,
+          "song": "Separator",
+          "streams": 24277145
+        }
+      ]
+    },
+    {
+      "name": "A Moon Shaped Pool",
+      "year": 2016,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Burn the Witch",
+          "streams": 97130433
+        },
+        {
+          "num": 2,
+          "song": "Daydreaming",
+          "streams": 95306145
+        },
+        {
+          "num": 3,
+          "song": "Decks Dark",
+          "streams": 70594561
+        },
+        {
+          "num": 4,
+          "song": "Desert Island Disk",
+          "streams": 29187528
+        },
+        {
+          "num": 5,
+          "song": "Ful Stop",
+          "streams": 34042501
+        },
+        {
+          "num": 6,
+          "song": "Glass Eyes",
+          "streams": 38718029
+        },
+        {
+          "num": 7,
+          "song": "Identikit",
+          "streams": 37145541
+        },
+        {
+          "num": 8,
+          "song": "The Numbers",
+          "streams": 27646863
+        },
+        {
+          "num": 9,
+          "song": "Present Tense",
+          "streams": 68996284
+        },
+        {
+          "num": 10,
+          "song": "Tinker Tailor Soldier Sailor Rich Man Poor Man Beggar Man Thief",
+          "streams": 21391830
+        },
+        {
+          "num": 11,
+          "song": "True Love Waits",
+          "streams": 94123394
+        }
+      ]
+    }
+  ]
+}
