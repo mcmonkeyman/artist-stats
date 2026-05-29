@@ -1,0 +1,765 @@
+{
+  "date": "2026-05-29",
+  "albums": [
+    {
+      "name": "Come On Pilgrim",
+      "year": 1987,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Caribou",
+          "streams": 14826125
+        },
+        {
+          "num": 2,
+          "song": "Vamos",
+          "streams": 7603691
+        },
+        {
+          "num": 3,
+          "song": "Isla De Encanta",
+          "streams": 6838703
+        },
+        {
+          "num": 4,
+          "song": "Ed Is Dead",
+          "streams": 2499873
+        },
+        {
+          "num": 5,
+          "song": "The Holiday Song",
+          "streams": 7543574
+        },
+        {
+          "num": 6,
+          "song": "Nimrod's Son",
+          "streams": 7353334
+        },
+        {
+          "num": 7,
+          "song": "I\u2019ve Been Tired",
+          "streams": 4937638
+        },
+        {
+          "num": 8,
+          "song": "Levitate Me",
+          "streams": 4347675
+        }
+      ]
+    },
+    {
+      "name": "Surfer Rosa",
+      "year": 1988,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Bone Machine",
+          "streams": 26042040
+        },
+        {
+          "num": 2,
+          "song": "Break My Body",
+          "streams": 14066739
+        },
+        {
+          "num": 3,
+          "song": "Something Against You",
+          "streams": 10442419
+        },
+        {
+          "num": 4,
+          "song": "Broken Face",
+          "streams": 10415735
+        },
+        {
+          "num": 5,
+          "song": "Gigantic",
+          "streams": 48834705
+        },
+        {
+          "num": 6,
+          "song": "River Euphrates",
+          "streams": 8817142
+        },
+        {
+          "num": 7,
+          "song": "Where Is My Mind?",
+          "streams": 1266218136
+        },
+        {
+          "num": 8,
+          "song": "Cactus",
+          "streams": 12651083
+        },
+        {
+          "num": 9,
+          "song": "Tony's Theme",
+          "streams": 5888239
+        },
+        {
+          "num": 10,
+          "song": "Oh My Golly!",
+          "streams": 4984066
+        },
+        {
+          "num": 11,
+          "song": "Vamos",
+          "streams": 7603691
+        },
+        {
+          "num": 12,
+          "song": "I'm Amazed",
+          "streams": 3876816
+        },
+        {
+          "num": 13,
+          "song": "Brick Is Red",
+          "streams": 4970486
+        }
+      ]
+    },
+    {
+      "name": "Doolittle",
+      "year": 1989,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Debaser",
+          "streams": 122355178
+        },
+        {
+          "num": 2,
+          "song": "Tame",
+          "streams": 25336170
+        },
+        {
+          "num": 3,
+          "song": "Wave of Mutilation",
+          "streams": 66937019
+        },
+        {
+          "num": 4,
+          "song": "I Bleed",
+          "streams": 23127236
+        },
+        {
+          "num": 5,
+          "song": "Here Comes Your Man",
+          "streams": 316363744
+        },
+        {
+          "num": 6,
+          "song": "Dead",
+          "streams": 12546489
+        },
+        {
+          "num": 7,
+          "song": "Monkey Gone to Heaven",
+          "streams": 122707553
+        },
+        {
+          "num": 8,
+          "song": "Mr. Grieves",
+          "streams": 20315086
+        },
+        {
+          "num": 9,
+          "song": "Crackity Jones",
+          "streams": 11882311
+        },
+        {
+          "num": 10,
+          "song": "La La Love You",
+          "streams": 30997763
+        },
+        {
+          "num": 11,
+          "song": "No. 13 Baby",
+          "streams": 12286184
+        },
+        {
+          "num": 12,
+          "song": "There Goes My Gun",
+          "streams": 9934676
+        },
+        {
+          "num": 13,
+          "song": "Hey",
+          "streams": 227988529
+        },
+        {
+          "num": 14,
+          "song": "Silver",
+          "streams": 8192524
+        },
+        {
+          "num": 15,
+          "song": "Gouge Away",
+          "streams": 74585619
+        }
+      ]
+    },
+    {
+      "name": "Bossanova",
+      "year": 1990,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Cecilia Ann",
+          "streams": 9454614
+        },
+        {
+          "num": 2,
+          "song": "Rock Music",
+          "streams": 4696984
+        },
+        {
+          "num": 3,
+          "song": "Velouria",
+          "streams": 31385408
+        },
+        {
+          "num": 4,
+          "song": "Allison",
+          "streams": 9226091
+        },
+        {
+          "num": 5,
+          "song": "Is She Weird",
+          "streams": 28237200
+        },
+        {
+          "num": 6,
+          "song": "Ana",
+          "streams": 30375584
+        },
+        {
+          "num": 7,
+          "song": "All Over the World",
+          "streams": 5752648
+        },
+        {
+          "num": 8,
+          "song": "Dig for Fire",
+          "streams": 13000805
+        },
+        {
+          "num": 9,
+          "song": "Down to the Well",
+          "streams": 3246018
+        },
+        {
+          "num": 10,
+          "song": "The Happening",
+          "streams": 7849773
+        },
+        {
+          "num": 11,
+          "song": "Blown Away",
+          "streams": 2844899
+        },
+        {
+          "num": 12,
+          "song": "Hang Wire",
+          "streams": 3043774
+        },
+        {
+          "num": 13,
+          "song": "Stormy Weather",
+          "streams": 2836062
+        },
+        {
+          "num": 14,
+          "song": "Havalina",
+          "streams": 6077625
+        }
+      ]
+    },
+    {
+      "name": "Trompe le Monde",
+      "year": 1991,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Trompe le Monde",
+          "streams": 5369601
+        },
+        {
+          "num": 2,
+          "song": "Planet of Sound",
+          "streams": 5289938
+        },
+        {
+          "num": 3,
+          "song": "Alec Eiffel",
+          "streams": 9128003
+        },
+        {
+          "num": 4,
+          "song": "The Sad Punk",
+          "streams": 2464892
+        },
+        {
+          "num": 5,
+          "song": "Head On",
+          "streams": 9050521
+        },
+        {
+          "num": 6,
+          "song": "U-Mass",
+          "streams": 13442953
+        },
+        {
+          "num": 7,
+          "song": "Palace of the Brine",
+          "streams": 2342147
+        },
+        {
+          "num": 8,
+          "song": "Letter to Memphis",
+          "streams": 4408812
+        },
+        {
+          "num": 9,
+          "song": "Bird Dream of the Olympus Mons",
+          "streams": 4688684
+        },
+        {
+          "num": 10,
+          "song": "Space (I Believe In)",
+          "streams": 1767465
+        },
+        {
+          "num": 11,
+          "song": "Subbacultcha",
+          "streams": 2215560
+        },
+        {
+          "num": 12,
+          "song": "Distance Equals Rate Times Time",
+          "streams": 1909266
+        },
+        {
+          "num": 13,
+          "song": "Lovely Day",
+          "streams": 1595160
+        },
+        {
+          "num": 14,
+          "song": "Motorway to Roswell",
+          "streams": 5065448
+        },
+        {
+          "num": 15,
+          "song": "The Navajo Know",
+          "streams": 1764723
+        }
+      ]
+    },
+    {
+      "name": "Indie Cindy",
+      "year": 2014,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "What Goes Boom",
+          "streams": 1862155
+        },
+        {
+          "num": 2,
+          "song": "Greens and Blues",
+          "streams": 8421882
+        },
+        {
+          "num": 3,
+          "song": "Indie Cindy",
+          "streams": 5829033
+        },
+        {
+          "num": 4,
+          "song": "Bagboy",
+          "streams": 2138838
+        },
+        {
+          "num": 5,
+          "song": "Magdalena 318",
+          "streams": 3957307
+        },
+        {
+          "num": 6,
+          "song": "Silver Snail",
+          "streams": 1655374
+        },
+        {
+          "num": 7,
+          "song": "Blue Eyed Hexe",
+          "streams": 1606455
+        },
+        {
+          "num": 8,
+          "song": "Ring the Bell",
+          "streams": 930066
+        },
+        {
+          "num": 9,
+          "song": "Another Toe in the Ocean",
+          "streams": 1624405
+        },
+        {
+          "num": 10,
+          "song": "Andro Queen",
+          "streams": 1767691
+        },
+        {
+          "num": 11,
+          "song": "Snakes",
+          "streams": 1477898
+        },
+        {
+          "num": 12,
+          "song": "Jaime Bravo",
+          "streams": 870301
+        },
+        {
+          "num": 13,
+          "song": "Bone Machine",
+          "streams": 26042040
+        },
+        {
+          "num": 14,
+          "song": "Hey",
+          "streams": 227988529
+        },
+        {
+          "num": 15,
+          "song": "Ana",
+          "streams": 30375584
+        },
+        {
+          "num": 16,
+          "song": "Magdalena 318",
+          "streams": 3957307
+        },
+        {
+          "num": 17,
+          "song": "Snakes",
+          "streams": 1477898
+        },
+        {
+          "num": 18,
+          "song": "Indie Cindy",
+          "streams": 5829033
+        },
+        {
+          "num": 19,
+          "song": "I've Been Tired",
+          "streams": 4937638
+        },
+        {
+          "num": 20,
+          "song": "Head On",
+          "streams": 9050521
+        },
+        {
+          "num": 21,
+          "song": "The Sad Punk",
+          "streams": 2464892
+        },
+        {
+          "num": 22,
+          "song": "Distance Equals Rate Times Time",
+          "streams": 1909266
+        },
+        {
+          "num": 23,
+          "song": "Something Against You",
+          "streams": 10442419
+        },
+        {
+          "num": 24,
+          "song": "Isla De Encanta",
+          "streams": 6838703
+        },
+        {
+          "num": 25,
+          "song": "Planet of Sound",
+          "streams": 5289938
+        },
+        {
+          "num": 26,
+          "song": "Women of War",
+          "streams": 0
+        }
+      ]
+    },
+    {
+      "name": "Head Carrier",
+      "year": 2016,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Head Carrier",
+          "streams": 3593629
+        },
+        {
+          "num": 2,
+          "song": "Classic Masher",
+          "streams": 3235174
+        },
+        {
+          "num": 3,
+          "song": "Baal's Back",
+          "streams": 1655793
+        },
+        {
+          "num": 4,
+          "song": "Might as Well Be Gone",
+          "streams": 3197945
+        },
+        {
+          "num": 5,
+          "song": "Oona",
+          "streams": 2407377
+        },
+        {
+          "num": 6,
+          "song": "Talent",
+          "streams": 2018931
+        },
+        {
+          "num": 7,
+          "song": "Tenement Song",
+          "streams": 3633322
+        },
+        {
+          "num": 8,
+          "song": "Bel Esprit",
+          "streams": 2046417
+        },
+        {
+          "num": 9,
+          "song": "All I Think About Now",
+          "streams": 128624592
+        },
+        {
+          "num": 10,
+          "song": "Um Chagga Lagga",
+          "streams": 2364055
+        },
+        {
+          "num": 11,
+          "song": "Plaster of Paris",
+          "streams": 1144704
+        },
+        {
+          "num": 12,
+          "song": "All the Saints",
+          "streams": 1533549
+        }
+      ]
+    },
+    {
+      "name": "Beneath the Eyrie",
+      "year": 2019,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "In the Arms of Mrs.\u00a0Mark of Cain",
+          "streams": 0
+        },
+        {
+          "num": 2,
+          "song": "On Graveyard Hill",
+          "streams": 7464859
+        },
+        {
+          "num": 3,
+          "song": "Catfish Kate",
+          "streams": 6375953
+        },
+        {
+          "num": 4,
+          "song": "This Is My Fate",
+          "streams": 975219
+        },
+        {
+          "num": 5,
+          "song": "Ready for Love",
+          "streams": 1170887
+        },
+        {
+          "num": 6,
+          "song": "Silver Bullet",
+          "streams": 1110456
+        },
+        {
+          "num": 7,
+          "song": "Long Rider",
+          "streams": 1068219
+        },
+        {
+          "num": 8,
+          "song": "Los Surfers Muertos",
+          "streams": 1321125
+        },
+        {
+          "num": 9,
+          "song": "St. Nazaire",
+          "streams": 1669246
+        },
+        {
+          "num": 10,
+          "song": "Bird of Prey",
+          "streams": 923060
+        },
+        {
+          "num": 11,
+          "song": "Daniel Boone",
+          "streams": 954167
+        },
+        {
+          "num": 12,
+          "song": "Death Horizon",
+          "streams": 849017
+        }
+      ]
+    },
+    {
+      "name": "Doggerel",
+      "year": 2022,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Nomatterday",
+          "streams": 2909749
+        },
+        {
+          "num": 2,
+          "song": "Vault of Heaven",
+          "streams": 3478119
+        },
+        {
+          "num": 3,
+          "song": "Dregs of the Wine",
+          "streams": 1408867
+        },
+        {
+          "num": 4,
+          "song": "Haunted House",
+          "streams": 1436443
+        },
+        {
+          "num": 5,
+          "song": "Get Simulated",
+          "streams": 1178667
+        },
+        {
+          "num": 6,
+          "song": "The Lord Has Come Back Today",
+          "streams": 921051
+        },
+        {
+          "num": 7,
+          "song": "Thunder and Lightning",
+          "streams": 618908
+        },
+        {
+          "num": 8,
+          "song": "There's a Moon On",
+          "streams": 4599046
+        },
+        {
+          "num": 9,
+          "song": "Pagan Man",
+          "streams": 539416
+        },
+        {
+          "num": 10,
+          "song": "Who's More Sorry Now?",
+          "streams": 612581
+        },
+        {
+          "num": 11,
+          "song": "You're Such a Sadducee",
+          "streams": 498180
+        },
+        {
+          "num": 12,
+          "song": "Doggerel",
+          "streams": 630745
+        }
+      ]
+    },
+    {
+      "name": "The Night the Zombies Came",
+      "year": 2024,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Primrose",
+          "streams": 1044015
+        },
+        {
+          "num": 2,
+          "song": "You're So Impatient",
+          "streams": 2840845
+        },
+        {
+          "num": 3,
+          "song": "Jane (The Night the Zombies Came)",
+          "streams": 598973
+        },
+        {
+          "num": 4,
+          "song": "Chicken",
+          "streams": 2645239
+        },
+        {
+          "num": 5,
+          "song": "Hypnotised",
+          "streams": 689759
+        },
+        {
+          "num": 6,
+          "song": "Johnny Good Man",
+          "streams": 534345
+        },
+        {
+          "num": 7,
+          "song": "Motoroller",
+          "streams": 1682438
+        },
+        {
+          "num": 8,
+          "song": "I Hear You Mary",
+          "streams": 370015
+        },
+        {
+          "num": 9,
+          "song": "Oyster Beds",
+          "streams": 1135322
+        },
+        {
+          "num": 10,
+          "song": "Mercy Me",
+          "streams": 435539
+        },
+        {
+          "num": 11,
+          "song": "Ernest Evans",
+          "streams": 297799
+        },
+        {
+          "num": 12,
+          "song": "Kings of the Prairie",
+          "streams": 302716
+        },
+        {
+          "num": 13,
+          "song": "The Vegas Suite",
+          "streams": 1102240
+        }
+      ]
+    }
+  ]
+}
