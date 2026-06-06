@@ -1,0 +1,349 @@
+{
+  "date": "2026-06-06",
+  "albums": [
+    {
+      "name": "Homework",
+      "year": 1997,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Daftendirekt",
+          "streams": 13273936
+        },
+        {
+          "num": 2,
+          "song": "WDPK 83.7 FM",
+          "streams": 0
+        },
+        {
+          "num": 3,
+          "song": "Revolution 909",
+          "streams": 46056232
+        },
+        {
+          "num": 4,
+          "song": "Da Funk",
+          "streams": 130634663
+        },
+        {
+          "num": 5,
+          "song": "Phoenix",
+          "streams": 11571297
+        },
+        {
+          "num": 6,
+          "song": "Fresh",
+          "streams": 15488712
+        },
+        {
+          "num": 7,
+          "song": "Around the World",
+          "streams": 514600959
+        },
+        {
+          "num": 8,
+          "song": "Rollin' & Scratchin'",
+          "streams": 21337046
+        },
+        {
+          "num": 9,
+          "song": "Teachers",
+          "streams": 10489950
+        },
+        {
+          "num": 10,
+          "song": "High Fidelity",
+          "streams": 7056697
+        },
+        {
+          "num": 11,
+          "song": "Rock'n Roll",
+          "streams": 6641672
+        },
+        {
+          "num": 12,
+          "song": "Oh Yeah",
+          "streams": 4923236
+        },
+        {
+          "num": 13,
+          "song": "Burnin'",
+          "streams": 10199058
+        },
+        {
+          "num": 14,
+          "song": "Indo Silver Club",
+          "streams": 6413023
+        },
+        {
+          "num": 15,
+          "song": "Alive",
+          "streams": 19666993
+        },
+        {
+          "num": 16,
+          "song": "Funk Ad",
+          "streams": 4613263
+        }
+      ]
+    },
+    {
+      "name": "Discovery",
+      "year": 2001,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "One More Time",
+          "streams": 912743966
+        },
+        {
+          "num": 2,
+          "song": "Aerodynamic",
+          "streams": 105844176
+        },
+        {
+          "num": 3,
+          "song": "Digital Love",
+          "streams": 210756856
+        },
+        {
+          "num": 4,
+          "song": "Harder, Better, Faster, Stronger",
+          "streams": 487515098
+        },
+        {
+          "num": 5,
+          "song": "Crescendolls",
+          "streams": 50950656
+        },
+        {
+          "num": 6,
+          "song": "Nightvision",
+          "streams": 40493285
+        },
+        {
+          "num": 7,
+          "song": "Superheroes",
+          "streams": 45574639
+        },
+        {
+          "num": 8,
+          "song": "High Life",
+          "streams": 43474494
+        },
+        {
+          "num": 9,
+          "song": "Something About Us",
+          "streams": 354108986
+        },
+        {
+          "num": 10,
+          "song": "Voyager",
+          "streams": 128575463
+        },
+        {
+          "num": 11,
+          "song": "Veridis Quo",
+          "streams": 259427586
+        },
+        {
+          "num": 12,
+          "song": "Short Circuit",
+          "streams": 31142647
+        },
+        {
+          "num": 13,
+          "song": "Face to Face",
+          "streams": 118633815
+        },
+        {
+          "num": 14,
+          "song": "Too Long",
+          "streams": 35757532
+        }
+      ]
+    },
+    {
+      "name": "Human AfterAll",
+      "year": 2005,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Human After All",
+          "streams": 41058256
+        },
+        {
+          "num": 2,
+          "song": "The Prime Time of Your Life",
+          "streams": 12155354
+        },
+        {
+          "num": 3,
+          "song": "Robot Rock",
+          "streams": 108714661
+        },
+        {
+          "num": 4,
+          "song": "Steam Machine",
+          "streams": 6411025
+        },
+        {
+          "num": 5,
+          "song": "Make Love",
+          "streams": 38740635
+        },
+        {
+          "num": 6,
+          "song": "The Brainwasher",
+          "streams": 5352155
+        },
+        {
+          "num": 7,
+          "song": "On/Off",
+          "streams": 0
+        },
+        {
+          "num": 8,
+          "song": "Television Rules the Nation",
+          "streams": 10626694
+        },
+        {
+          "num": 9,
+          "song": "Technologic",
+          "streams": 86239065
+        },
+        {
+          "num": 10,
+          "song": "Emotion",
+          "streams": 7563028
+        },
+        {
+          "num": 11,
+          "song": "Robot Rock",
+          "streams": 108714661
+        },
+        {
+          "num": 12,
+          "song": "Human After All",
+          "streams": 41058256
+        },
+        {
+          "num": 13,
+          "song": "Technologic",
+          "streams": 86239065
+        },
+        {
+          "num": 14,
+          "song": "The Brainwasher",
+          "streams": 5352155
+        },
+        {
+          "num": 15,
+          "song": "The Prime Time of Your Life",
+          "streams": 12155354
+        },
+        {
+          "num": 16,
+          "song": "Human After All",
+          "streams": 41058256
+        },
+        {
+          "num": 17,
+          "song": "Technologic",
+          "streams": 86239065
+        },
+        {
+          "num": 18,
+          "song": "Human After All",
+          "streams": 41058256
+        },
+        {
+          "num": 19,
+          "song": "Technologic",
+          "streams": 86239065
+        },
+        {
+          "num": 20,
+          "song": "Robot Rock",
+          "streams": 108714661
+        }
+      ]
+    },
+    {
+      "name": "RandomAccessMemories",
+      "year": 2013,
+      "tracks": [
+        {
+          "num": 1,
+          "song": "Give Life Back to Music",
+          "streams": 159736237
+        },
+        {
+          "num": 2,
+          "song": "The Game of Love",
+          "streams": 85130312
+        },
+        {
+          "num": 3,
+          "song": "Giorgio by Moroder",
+          "streams": 169338559
+        },
+        {
+          "num": 4,
+          "song": "Within",
+          "streams": 87719974
+        },
+        {
+          "num": 5,
+          "song": "Instant Crush",
+          "streams": 0
+        },
+        {
+          "num": 6,
+          "song": "Lose Yourself to Dance",
+          "streams": 0
+        },
+        {
+          "num": 7,
+          "song": "Touch",
+          "streams": 0
+        },
+        {
+          "num": 8,
+          "song": "Get Lucky",
+          "streams": 9218167
+        },
+        {
+          "num": 9,
+          "song": "Beyond",
+          "streams": 65874555
+        },
+        {
+          "num": 10,
+          "song": "Motherboard",
+          "streams": 49264673
+        },
+        {
+          "num": 11,
+          "song": "Fragments of Time",
+          "streams": 0
+        },
+        {
+          "num": 12,
+          "song": "Doin' It Right",
+          "streams": 0
+        },
+        {
+          "num": 13,
+          "song": "Contact",
+          "streams": 58234309
+        },
+        {
+          "num": 14,
+          "song": "Horizon",
+          "streams": 0
+        }
+      ]
+    }
+  ]
+}
